@@ -5,7 +5,8 @@ import {
   StyleSheet,
   View,
   Text,
-  ActivityIndicator
+  ActivityIndicator,
+  TouchableOpacity
 } from "react-native";
 import { AppLoading, Asset, Font, Icon } from "expo";
 
@@ -19,6 +20,9 @@ export default class AuthLoading extends React.Component {
       <View style={styles.container}>
         <ActivityIndicator size="large" color="#0000ff" />
         <Text>Loading!!!</Text>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate("App")}>
+            <Text>Go  </Text>
+        </TouchableOpacity>
       </View>
     );
   }
