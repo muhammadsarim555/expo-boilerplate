@@ -2,32 +2,22 @@ import React from "react";
 import {
   Platform,
   StatusBar,
-  StyleSheet,
   View,
   Text,
-  TouchableOpacity
 } from "react-native";
 import { AppLoading, Asset, Font, Icon } from "expo";
 
-export default class Home extends React.Component {
-  state = {
-    isLoadingComplete: false
-  };
+// FILES
+import { styles } from "./styles";
 
+export default class Home extends React.Component {
   render() {
+    const { container } = styles; // destruncting
+
     return (
-      <View style={styles.container}>
+      <View style={container}>
         <Text>Home!!!</Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center"
-  }
-});

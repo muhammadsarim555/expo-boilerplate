@@ -1,6 +1,16 @@
 import React from "react";
-import { Platform, StatusBar, StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity
+} from "react-native";
 import { AppLoading, Asset, Font, Icon } from "expo";
+
+// FILES
+import { styles } from "./styles";
 
 export default class Login extends React.Component {
   state = {
@@ -8,22 +18,17 @@ export default class Login extends React.Component {
   };
 
   render() {
+    const { container } = styles;
+
     return (
-      <View style={styles.container}>
+      <View style={container}>
         <Text>Login!!!</Text>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate("Home")}>
-            <Text>Go  </Text>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("Home")}
+        >
+          <Text>Go </Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center"
-  }
-});
