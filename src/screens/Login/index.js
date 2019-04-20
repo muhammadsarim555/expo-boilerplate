@@ -17,15 +17,17 @@ export default class Login extends React.Component {
     isLoadingComplete: false
   };
 
+  update = () => {
+    this.props.navigation.navigate("Home");
+  };
+
   render() {
     const { container } = styles;
 
     return (
       <View style={container}>
         <Text>Login!!!</Text>
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate("Home")}
-        >
+        <TouchableOpacity onPress={this.update}>
           <Text>Go </Text>
         </TouchableOpacity>
       </View>

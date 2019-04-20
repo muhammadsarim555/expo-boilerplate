@@ -6,8 +6,7 @@ import {
   createDrawerNavigator
 } from "react-navigation";
 
-// Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
-// goes here.
+// FILES
 import AuthLoadingScreen from "../components/AuthLoading";
 import LoginScreen from "../screens/Login";
 import SignUpScreen from "../screens/SignUp";
